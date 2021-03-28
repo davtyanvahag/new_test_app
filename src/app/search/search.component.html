@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h3>Search</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-8">
+      <div class="form-group">
+        <label for="search">Serach</label>
+        <input type="text" id="search" name="search" [(ngModel)]="searchText" class="form-control" placeholder="Search ...">
+      </div>
+    </div>
+    <div class="col-4">
+      <button class="btn btn-success"  (click)="search()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M14.53 15.59a8.25 8.25 0 111.06-1.06l5.69 5.69a.75.75 0 11-1.06 1.06l-5.69-5.69zM2.5 9.25a6.75 6.75 0 1111.74 4.547.746.746 0 00-.443.442A6.75 6.75 0 012.5 9.25z"></path></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table">
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Company</th>
+          <th scope="col">Phone</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let user of users; let i = index">
+          <th scope="row">{{i+1}}</th>
+          <td>{{user['First Names']}}</td>
+          <td>{{user['Last Names']}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.Company}}</td>
+          <td>{{user.Phone}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
